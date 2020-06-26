@@ -1,0 +1,228 @@
+2020-05-23 15:09:12,267 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 15:09:12,369 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 15:09:12,421 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:09:12,470 :INFO : test_formSubmission : Select gender Male
+2020-05-23 15:09:12,527 :INFO : test_formSubmission : Submit form
+2020-05-23 15:09:12,560 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 15:09:13,249 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 15:09:13,249 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 15:09:13,370 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 15:09:13,370 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 15:09:13,427 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:09:13,427 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:09:13,494 :INFO : test_formSubmission : Select gender Female
+2020-05-23 15:09:13,494 :INFO : test_formSubmission : Select gender Female
+2020-05-23 15:09:13,540 :INFO : test_formSubmission : Submit form
+2020-05-23 15:09:13,540 :INFO : test_formSubmission : Submit form
+2020-05-23 15:09:13,556 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 15:09:13,556 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 15:10:28,048 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 15:10:28,155 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 15:10:28,216 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:10:28,264 :INFO : test_formSubmission : Select gender Male
+2020-05-23 15:10:28,321 :INFO : test_formSubmission : Submit form
+2020-05-23 15:10:28,353 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 15:10:29,128 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 15:10:29,128 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 15:10:29,256 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 15:10:29,256 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 15:10:29,299 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:10:29,299 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 15:10:29,362 :INFO : test_formSubmission : Select gender Female
+2020-05-23 15:10:29,362 :INFO : test_formSubmission : Select gender Female
+2020-05-23 15:10:29,401 :INFO : test_formSubmission : Submit form
+2020-05-23 15:10:29,401 :INFO : test_formSubmission : Submit form
+2020-05-23 15:10:29,418 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 15:10:29,418 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:33:20,005 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 16:33:20,154 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 16:33:20,269 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:33:20,563 :INFO : test_formSubmission : Select gender Male
+2020-05-23 16:33:21,279 :INFO : test_formSubmission : Submit form
+2020-05-23 16:33:21,368 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:33:21,820 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:33:21,915 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 16:33:21,915 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 16:33:22,049 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 16:33:22,049 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 16:33:22,192 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:33:22,192 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:33:22,320 :INFO : test_formSubmission : Select gender Female
+2020-05-23 16:33:22,320 :INFO : test_formSubmission : Select gender Female
+2020-05-23 16:33:22,383 :INFO : test_formSubmission : Submit form
+2020-05-23 16:33:22,383 :INFO : test_formSubmission : Submit form
+2020-05-23 16:33:22,414 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:33:22,414 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:33:22,847 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:33:22,847 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:49:08,265 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 16:49:08,407 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 16:49:08,466 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:49:08,518 :INFO : test_formSubmission : Select gender Male
+2020-05-23 16:49:08,642 :INFO : test_formSubmission : Submit form
+2020-05-23 16:49:08,674 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:49:09,615 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:49:09,794 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 16:49:09,794 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 16:49:09,949 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 16:49:09,949 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 16:49:10,003 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:49:10,003 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 16:49:10,085 :INFO : test_formSubmission : Select gender Female
+2020-05-23 16:49:10,085 :INFO : test_formSubmission : Select gender Female
+2020-05-23 16:49:10,149 :INFO : test_formSubmission : Submit form
+2020-05-23 16:49:10,149 :INFO : test_formSubmission : Submit form
+2020-05-23 16:49:10,179 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:49:10,179 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 16:49:10,590 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:49:10,590 :INFO : test_formSubmission : Refreshed form
+2020-05-23 16:49:27,581 :INFO : test_e2e : Getting all card titles
+2020-05-23 16:49:27,594 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 16:49:27,702 :INFO : test_e2e : add to cart button clicked
+2020-05-23 17:19:51,649 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 17:19:51,775 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 17:19:51,862 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:19:51,912 :INFO : test_formSubmission : Select gender Male
+2020-05-23 17:19:52,154 :INFO : test_formSubmission : Submit form
+2020-05-23 17:19:52,191 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:19:52,646 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:19:52,764 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:19:52,764 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:19:52,885 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:19:52,885 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:19:52,948 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:19:52,948 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:19:53,043 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:19:53,043 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:19:53,112 :INFO : test_formSubmission : Submit form
+2020-05-23 17:19:53,112 :INFO : test_formSubmission : Submit form
+2020-05-23 17:19:53,140 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:19:53,140 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:19:53,561 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:19:53,561 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:20:12,030 :INFO : test_e2e : Getting all card titles
+2020-05-23 17:20:12,042 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 17:20:12,164 :INFO : test_e2e : add to cart button clicked
+2020-05-23 17:24:50,108 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 17:24:50,393 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 17:24:50,626 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:24:50,654 :INFO : test_formSubmission : Select gender Male
+2020-05-23 17:24:50,954 :INFO : test_formSubmission : Submit form
+2020-05-23 17:24:50,975 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:24:53,872 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:24:53,946 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:24:53,946 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:24:54,010 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:24:54,010 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:24:54,243 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:24:54,243 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:24:54,491 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:24:54,491 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:24:54,735 :INFO : test_formSubmission : Submit form
+2020-05-23 17:24:54,735 :INFO : test_formSubmission : Submit form
+2020-05-23 17:24:54,750 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:24:54,750 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:24:57,631 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:24:57,631 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:25:21,035 :INFO : test_e2e : Getting all card titles
+2020-05-23 17:25:21,039 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 17:25:21,324 :INFO : test_e2e : add to cart button clicked
+2020-05-23 17:43:35,378 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 17:43:35,548 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 17:43:35,655 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:43:35,711 :INFO : test_formSubmission : Select gender Male
+2020-05-23 17:43:35,856 :INFO : test_formSubmission : Submit form
+2020-05-23 17:43:35,896 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:43:36,858 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:43:36,978 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:43:36,978 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 17:43:37,123 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:43:37,123 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 17:43:37,195 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:43:37,195 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 17:43:37,312 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:43:37,312 :INFO : test_formSubmission : Select gender Female
+2020-05-23 17:43:37,375 :INFO : test_formSubmission : Submit form
+2020-05-23 17:43:37,375 :INFO : test_formSubmission : Submit form
+2020-05-23 17:43:37,405 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:43:37,405 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 17:43:37,946 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:43:37,946 :INFO : test_formSubmission : Refreshed form
+2020-05-23 17:43:55,695 :INFO : test_e2e : Getting all card titles
+2020-05-23 17:43:55,709 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 17:43:55,831 :INFO : test_e2e : add to cart button clicked
+2020-05-23 19:55:54,605 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 19:55:54,752 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 19:55:54,822 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 19:55:54,872 :INFO : test_formSubmission : Select gender Male
+2020-05-23 19:55:54,972 :INFO : test_formSubmission : Submit form
+2020-05-23 19:55:55,008 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 19:55:55,442 :INFO : test_formSubmission : Refreshed form
+2020-05-23 19:55:55,615 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 19:55:55,615 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 19:55:55,751 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 19:55:55,751 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 19:55:55,809 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 19:55:55,809 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 19:55:55,883 :INFO : test_formSubmission : Select gender Female
+2020-05-23 19:55:55,883 :INFO : test_formSubmission : Select gender Female
+2020-05-23 19:55:55,939 :INFO : test_formSubmission : Submit form
+2020-05-23 19:55:55,939 :INFO : test_formSubmission : Submit form
+2020-05-23 19:55:55,968 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 19:55:55,968 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 19:55:56,387 :INFO : test_formSubmission : Refreshed form
+2020-05-23 19:55:56,387 :INFO : test_formSubmission : Refreshed form
+2020-05-23 19:56:12,950 :INFO : test_e2e : Getting all card titles
+2020-05-23 19:56:12,963 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 19:56:13,158 :INFO : test_e2e : add to cart button clicked
+2020-05-23 20:00:22,354 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 20:00:22,468 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 20:00:22,535 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 20:00:22,587 :INFO : test_formSubmission : Select gender Male
+2020-05-23 20:00:22,717 :INFO : test_formSubmission : Submit form
+2020-05-23 20:00:22,750 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 20:00:23,206 :INFO : test_formSubmission : Refreshed form
+2020-05-23 20:00:23,295 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 20:00:23,295 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 20:00:23,408 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 20:00:23,408 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 20:00:23,475 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 20:00:23,475 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 20:00:23,550 :INFO : test_formSubmission : Select gender Female
+2020-05-23 20:00:23,550 :INFO : test_formSubmission : Select gender Female
+2020-05-23 20:00:23,603 :INFO : test_formSubmission : Submit form
+2020-05-23 20:00:23,603 :INFO : test_formSubmission : Submit form
+2020-05-23 20:00:23,631 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 20:00:23,631 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 20:00:24,023 :INFO : test_formSubmission : Refreshed form
+2020-05-23 20:00:24,023 :INFO : test_formSubmission : Refreshed form
+2020-05-23 20:00:41,090 :INFO : test_e2e : Getting all card titles
+2020-05-23 20:00:41,103 :INFO : test_e2e : Getting all add to card buttons
+2020-05-23 20:00:41,241 :INFO : test_e2e : add to cart button clicked

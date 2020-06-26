@@ -1,0 +1,24 @@
+2020-05-23 14:41:15,245 :INFO : test_formSubmission : Entering name Kepler
+2020-05-23 14:41:15,366 :INFO : test_formSubmission : Entering email keph76@gmail.com
+2020-05-23 14:41:15,430 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 14:41:15,480 :INFO : test_formSubmission : Select gender Male
+2020-05-23 14:41:15,574 :INFO : test_formSubmission : Submit form
+2020-05-23 14:41:15,609 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 14:41:16,062 :INFO : test_formSubmission : Refreshed form
+2020-05-23 14:41:16,151 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 14:41:16,151 :INFO : test_formSubmission : Entering name Deneb
+2020-05-23 14:41:16,275 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 14:41:16,275 :INFO : test_formSubmission : Entering email denebsolano@gmail.com
+2020-05-23 14:41:16,334 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 14:41:16,334 :INFO : test_formSubmission : Checkbox clicked
+2020-05-23 14:41:16,413 :INFO : test_formSubmission : Select gender Female
+2020-05-23 14:41:16,413 :INFO : test_formSubmission : Select gender Female
+2020-05-23 14:41:16,480 :INFO : test_formSubmission : Submit form
+2020-05-23 14:41:16,480 :INFO : test_formSubmission : Submit form
+2020-05-23 14:41:16,510 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 14:41:16,510 :INFO : test_formSubmission : Getting the alert ×
+Success! The Form has been submitted successfully!.
+2020-05-23 14:41:16,961 :INFO : test_formSubmission : Refreshed form
+2020-05-23 14:41:16,961 :INFO : test_formSubmission : Refreshed form
