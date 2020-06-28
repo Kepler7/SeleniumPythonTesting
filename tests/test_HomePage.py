@@ -37,10 +37,13 @@ class TestHomePage(BaseClass):
     # you can also pass dictionary as parameter
     #@pytest.fixture(params=[{"firstName": "Kepler", "lastName": "Velasco", "email": "keph76@gmail.com", "gender": "Male"}])
     #however data above will go to a separate file
-    #@pytest.fixture(params=HomePageData.test_homePage_data)# this is to use the dict directly
+
+    # this is to use the dict directly
+    #@pytest.fixture(params=HomePageData.test_homePage_data)
     #def getData(self, request):
         #return request.param
 
-    @pytest.fixture(params=HomePageData.getTestData("Testcase2"))# this is for used dictionary created with data from excel
+    # this is for used dictionary created with data from excel
+    @pytest.fixture(params=HomePageData.getTestData("Testcase2"))
     def getData(self, request):
         return request.param

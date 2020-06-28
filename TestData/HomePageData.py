@@ -6,6 +6,8 @@ class HomePageData:
                           {"firstName": "Deneb", "lastName": "Solano", "email": "denebsolano@gmail.com",
                            "gender": "Female"}]
 
+    wa_test_url = {"burgerKing": "https://wa.me/5215513093333", "aeroMexico": "https://wa.me/5215551334000"}
+
     @staticmethod
     def getTestData(test_case_name):
         Dict = {}

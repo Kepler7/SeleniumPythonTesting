@@ -2,6 +2,8 @@ import pytest
 from selenium import webdriver
 import time
 
+from TestData.HomePageData import HomePageData
+
 driver = None
 
 
@@ -13,17 +15,21 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="class")
 def setup(request):
+    data = HomePageData()
     global driver
     browser_name = request.config.getoption("browser_name")
     if browser_name == "chrome":
+        options = webdriver.ChromeOptions()
+        options.add_argument("user-data-dir=C:\\Users\\deneb\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2")
         driver = webdriver.Chrome(
-            executable_path="C:\\Users\\deneb\\Desktop\\seleniumPython\\chromedriver_win32\\chromedriver.exe")
+            executable_path="C:\\Users\\deneb\\Desktop\\seleniumPython\\chromedriver_win32\\chromedriver.exe",
+            chrome_options=options)
     elif browser_name == "firefox":
         driver = webdriver.Firefox(
             executable_path="C:\\Users\\deneb\\Desktop\\seleniumPython\\geckodriver-v0.25.0-win64\\geckodriver.exe")
     elif browser_name == "ie":
         print("IE driver")
-    driver.get("https://rahulshettyacademy.com/angularpractice/")
+    driver.get(data.wa_test_url["burgerKing"])
     driver.maximize_window()
     request.cls.driver = driver
     yield
