@@ -22,11 +22,10 @@ def setup(request):
         options = webdriver.ChromeOptions()
         options.add_argument("user-data-dir=C:\\Users\\deneb\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2")
         driver = webdriver.Chrome(
-            executable_path="C:\\Users\\deneb\\Desktop\\seleniumPython\\chromedriver_win32\\chromedriver.exe",
-            chrome_options=options)
+            executable_path="C:\\drivers\\chromedriver.exe",
+            options=options)
     elif browser_name == "firefox":
-        driver = webdriver.Firefox(
-            executable_path="C:\\Users\\deneb\\Desktop\\seleniumPython\\geckodriver-v0.25.0-win64\\geckodriver.exe")
+        driver = webdriver.Firefox()
     elif browser_name == "ie":
         print("IE driver")
     driver.get(data.wa_test_url["burgerKing"])
