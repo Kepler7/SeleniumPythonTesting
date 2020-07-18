@@ -1,0 +1,5 @@
+[84530:775:0710/143542.175124:INFO:CONSOLE(0)] "Refused to load the font 'https://static.xx.fbcdn.net/rsrc.php/yx/r/nwONwzmBRIP.ttf' because it violates the following Content Security Policy directive: "font-src data:".
+", source: https://api.whatsapp.com/send?phone=5215513093333&text=&source=&data=&app_absent= (0)
+[84530:775:0710/143542.426915:INFO:CONSOLE(0)] "Refused to load the font 'https://static.xx.fbcdn.net/rsrc.php/yx/r/nwONwzmBRIP.ttf' because it violates the following Content Security Policy directive: "font-src data:".
+", source: https://api.whatsapp.com/send?phone=5215513093333&text=&source=&data=&app_absent= (0)
+[84530:775:0710/143603.685526:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

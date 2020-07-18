@@ -1,7 +1,0 @@
-[0523/164937.267:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
-[0523/164937.378:ERROR:process_info.cc(556)] ReadMemoryInfo failed
-[0523/164937.378:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
-[0627/195300.163:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
-[0627/195300.162:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
-[0627/195300.541:ERROR:exception_snapshot_win.cc(98)] thread ID 21224 not found in process
-[0627/195300.541:ERROR:exception_snapshot_win.cc(98)] thread ID 14660 not found in process

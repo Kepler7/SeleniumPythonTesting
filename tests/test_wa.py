@@ -2,6 +2,7 @@ import time
 
 import pytest
 
+from API.QA_Botrunner_API_Client import QA_Botrunner_API_Client
 from TestData import HomePageData
 from pageObjects.waPageObjects.WhatsAppHome import WhatsAppHome
 from utilities.BaseClass import BaseClass
@@ -10,7 +11,4 @@ from utilities.BaseClass import BaseClass
 class TestWa(BaseClass):
 
     def test_wabot(self):
-        home = WhatsAppHome(self.driver)
-        home.clickContinueToChat()
-        home.clickUseWeb()
         time.sleep(20)
