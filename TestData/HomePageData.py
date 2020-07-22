@@ -2,9 +2,6 @@ import openpyxl
 
 
 class HomePageData:
-    test_homePage_data = [{"firstName": "Kepler", "lastName": "Velasco", "email": "keph76@gmail.com", "gender": "Male"},
-                          {"firstName": "Deneb", "lastName": "Solano", "email": "denebsolano@gmail.com",
-                           "gender": "Female"}]
 
     wa_test_url = {"burgerKing": "https://wa.me/5215513093333", "aeroMexico": "https://wa.me/5215551334000"}
 

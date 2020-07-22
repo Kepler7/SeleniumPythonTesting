@@ -7,9 +7,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 
+from config.ConfigReader import ReadConfig
+
 
 @pytest.mark.usefixtures("setup")
 class BaseClass:
+
+    def get_settings_object(self):
+        reader = ReadConfig()
+        return reader.readConfigFile()
 
     def verifyLinkPresence(self, text):
         WebDriverWait(self.driver, 10).until(

@@ -4,6 +4,7 @@ import time
 
 from API.QA_Botrunner_API_Client import QA_Botrunner_API_Client
 from config.ConfigReader import ReadConfig
+from pageObjects.waPageObjects.ConversationPage_wa import ConversationPage
 
 driver = None
 
@@ -34,8 +35,11 @@ def setup(request):
     driver.get(settings.bot_wa_url)
     driver.implicitly_wait(10)
     driver.find_element_by_xpath("//div[@id='side']/header//img").click()
+    conversation_page = ConversationPage(driver)
+    conversation_page.send_keys_to_bar_message("INIT MESSAGE..")
+    time.sleep(10)
     botrunner = QA_Botrunner_API_Client()
-    botrunner.change_state(settings.user_id, settings.state, settings.bot_slug, settings.botrunner_auth_token)
+    botrunner.change_state(settings.user_number, settings.state)
     time.sleep(20)
     request.cls.driver = driver
     yield
@@ -68,3 +72,4 @@ def pytest_runtest_makereport(item):
 
 def _capture_screenshot(name):
     driver.get_screenshot_as_file(name)
+
