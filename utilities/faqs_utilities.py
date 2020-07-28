@@ -62,6 +62,33 @@ def wa_faqs_semantic_search(
     return faqs
 
 
+def fb_faqs_semantic_search(
+        cms_api, bot_slug,
+        botrunner_api, user_id, faq_state,
+        selenium_wa_page,
+        faq_tests_dir
+):
+    pass_dir, fail_dir = create_faqs_dirs(faq_tests_dir)
+    # Create tests dir if it doesn't exists:
+    bot_semantic = cms_api.get_semantic_search(bot_slug)
+    faqs = cms_api.get_questions_and_answers(bot_semantic)
+    for key, value in faqs.items():
+        value["key"] = key
+        value["cleaned_answer"] = string_cleaner(value["answer"]).strip()
+        value["received_answer"] = ""
+        value["result_code"] = FAQ_STATUS_CODES.NOT_TESTED.value
+        value["result_code_description"] = FAQ_STATUS_CODES.NOT_TESTED.name
+
+    for key, value in faqs.items():
+        do_fb_faq(
+            key, value, selenium_wa_page,
+            botrunner_api, user_id, faq_state,
+            faq_tests_dir
+        )
+
+    return faqs
+
+
 def create_faqs_dirs(faq_tests_dir):
     os.makedirs(faq_tests_dir, exist_ok=True)
     pass_dir = os.path.join(faq_tests_dir, "PASS")
@@ -150,9 +177,7 @@ def do_faq(
             if index is not None:
                 try:
                     selenium_wa_page.send_and_wait_for_n(str(index), 2)
-                    messages = selenium_wa_page.get_messages_texts(
-                        selenium_wa_page.get_all_messages_elements()[-2:]
-                    )
+                    messages = selenium_wa_page.get_messages_texts_faqs(selenium_wa_page.get_all_messages_elements()[-2:])
                     value["received_answer"] = messages[0].strip()
                     if messages[0].strip() == answer.strip():
                         # Submit option and succeded
@@ -167,6 +192,89 @@ def do_faq(
                     value["result_code"] = FAQ_STATUS_CODES.SUGGESTION_LIST_TIMEOUT_WAITING_FOR_REPLIES.value
                     value[
                         "result_code_description"] = FAQ_STATUS_CODES.SUGGESTION_LIST_TIMEOUT_WAITING_FOR_REPLIES.name
+        else:
+            # Timeout (waiting for 2 messages)
+            value["result_code"] = FAQ_STATUS_CODES.TIMEOUT_WAITING_FOR_REPLIES.value
+            value["result_code_description"] = FAQ_STATUS_CODES.TIMEOUT_WAITING_FOR_REPLIES.name
+
+
+def do_fb_faq(
+        key, value, selenium_fb_page,
+        botrunner_api, user_id, faq_state,
+        faq_tests_dir
+):
+    pass_dir, fail_dir = create_faqs_dirs(faq_tests_dir)
+
+    try:
+        last_message = None
+        messages = selenium_fb_page.get_all_messages_elements()
+        if len(messages) > 0:
+            last_message = messages[-1]
+        botrunner_api.change_state(
+            user_id=user_id,
+            state_name=faq_state
+        )
+        selenium_fb_page.send_and_wait_for_n(None, 1, last_element=last_message)
+    except TimeoutError as e:
+        return
+
+    try:
+        question = value["question"].strip()
+        answer = value["cleaned_answer"]
+        value["question"] = question
+        selenium_fb_page.send_and_wait_for_n(question, 2)
+        messages = selenium_fb_page.get_messages_texts(
+            selenium_fb_page.get_all_messages_elements()[-2:]
+        )
+        value["received_answer"] = messages[0].strip()
+        # Answer text doesn't match with expected message
+        if messages[0].strip() != answer.strip():
+            selenium_fb_page.driver.save_screenshot(
+                os.path.join(fail_dir, f"{key}.png")
+            )
+            value["result_code"] = FAQ_STATUS_CODES.UNEXPECTED_ANSWER.value
+            value["result_code_description"] = FAQ_STATUS_CODES.UNEXPECTED_ANSWER.name
+        else:
+            selenium_fb_page.driver.save_screenshot(
+                os.path.join(pass_dir, f"{key}.png")
+            )
+            value["result_code"] = FAQ_STATUS_CODES.EXPECTED_ANSWER.value
+            value["result_code_description"] = FAQ_STATUS_CODES.EXPECTED_ANSWER.name
+
+    except TimeoutError as e:
+        selenium_fb_page.driver.save_screenshot(
+            os.path.join(fail_dir, f"{key}.png")
+        )
+        value["received_answer"] = selenium_fb_page.get_all_messages_elements()[-1].text.strip()
+        # Validate if the answer contains the question.
+        if question in value["received_answer"]:
+            # Case 2 scenario
+            #  question in suggestion list
+            index = None
+            # Separate by lines and clean empty lines
+            for i, suggestion in enumerate([a for a in value["received_answer"].split("\n") if a][1:], 1):
+                if question in suggestion:
+                    index = i
+                    break
+            # Try except ...
+            if index is not None:
+                try:
+                    selenium_fb_page.send_and_wait_for_n(str(index), 2)
+                    messages = selenium_fb_page.get_messages_texts(
+                        selenium_fb_page.get_all_messages_elements()[-2:]
+                    )
+                    value["received_answer"] = messages[0].strip()
+                    if messages[0].strip() == answer.strip():
+                        # Submit option and succeded
+                        value["result_code"] = FAQ_STATUS_CODES.SUGGESTION_LIST_EXPECTED_ANSWER.value
+                        value["result_code_description"] = FAQ_STATUS_CODES.SUGGESTION_LIST_EXPECTED_ANSWER.name
+                    else:
+                        # Tried option and failed
+                        value["result_code"] = FAQ_STATUS_CODES.SUGGESTION_LIST_UNEXPECTED_ANSWER.value
+                        value["result_code_description"] = FAQ_STATUS_CODES.SUGGESTION_LIST_UNEXPECTED_ANSWER.name
+                except TimeoutError as e:
+                    value["result_code"] = FAQ_STATUS_CODES.SUGGESTION_LIST_TIMEOUT_WAITING_FOR_REPLIES.value
+                    value["result_code_description"] = FAQ_STATUS_CODES.SUGGESTION_LIST_TIMEOUT_WAITING_FOR_REPLIES.name
         else:
             # Timeout (waiting for 2 messages)
             value["result_code"] = FAQ_STATUS_CODES.TIMEOUT_WAITING_FOR_REPLIES.value

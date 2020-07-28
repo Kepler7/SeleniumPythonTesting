@@ -14,6 +14,10 @@ class Webview_ProductsPage(BaseClass):
     PRODUCT_TILES_XPATH = (By.XPATH, '//div[contains(@id,"product-")]')
 
     def verify_correct_prices_in_products(self, path):
+        """
+        Compare products prices in webview with the list send by the cliente and verifies proces are correct
+        :param path: path of the csv file provided by the client that includes description of the product and price.
+        """
         log = self.getLogger()
         products = self.get_product_tiles()
         names_grams = []

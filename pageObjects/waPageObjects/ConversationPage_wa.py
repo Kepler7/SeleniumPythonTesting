@@ -35,20 +35,18 @@ class ConversationPage(BaseClass):
 
     def send_keys_and_wait_n_number_messages(self, text_send, n, expected_message):
         """
+        ************IN MAINTENANCE**************
         :sends a message to whatsapp and verify n number of messages as response
         and also verifies for an expected messages or words.
         """
         messages_after = []
         messages = self.get_messages_texts()
         current_quantity = len(messages) + 1
-        breakpoint()
         self.send_keys_to_bar_message(text_send)
         for quantity in range(10):
             messages_after = self.get_messages_texts()
             if len(messages_after) < current_quantity + n:
-                breakpoint()
                 time.sleep(2)
-        breakpoint()
         assert len(messages_after) == current_quantity + n
         assert expected_message in messages_after[-1]
 
@@ -66,6 +64,7 @@ class ConversationPage(BaseClass):
 
     def get_messages_texts_faqs(self, messages):
         """
+        This get messages tesxt is the one that has to be used in the FAQ's testing
         :returns a list of string with messages
         """
         currentMessage = []

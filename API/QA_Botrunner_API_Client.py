@@ -27,7 +27,7 @@ class QA_Botrunner_API_Client(BaseClass):
     def get_client_id(self, bot_slug, phone, auth, content_type):
         """
         :return: Client id of a registered client, This method has
-        been tested with panda with some other it could vary
+        been tested with panda express with some other it could vary
         """
         baseurl = "http://api-staging2.yalochat.com/big-storage-ng/api/store/"
 
