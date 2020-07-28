@@ -40,8 +40,6 @@ class QACmsClientAPI:
         """
         endpoint = f"/api/content/ci-semantic-search/{bot_slug}"
         response = requests.get(f"{self.get_endpoint_url(endpoint)}", headers=self.get_headers())
-        #response = requests.get("https://cms-ci-global.yalochat.com/" + endpoint, headers=self.get_headers())
-        breakpoint()
         return response.json()
 
     def set_token(

@@ -4,6 +4,7 @@ import time
 
 from API.QA_Botrunner_API_Client import QA_Botrunner_API_Client
 from config.ConfigReader import ReadConfig
+from pageObjects.faPageObjects.Login_page import LoginPage
 from pageObjects.waPageObjects.ConversationPage_wa import ConversationPage
 
 driver = None
@@ -31,13 +32,17 @@ def setup(request):
         driver = webdriver.Firefox()
     elif browser_name == "ie":
         print("IE driver")
-    # driver.get(data.wa_test_url["burgerKing"])
-    driver.get(settings.bot_wa_url)
-    driver.implicitly_wait(10)
-    driver.find_element_by_xpath("//div[@id='side']/header//img").click()
-    conversation_page = ConversationPage(driver)
-    conversation_page.send_keys_to_bar_message("INIT MESSAGE..")
-    time.sleep(10)
+    if settings.bot_type == "wa":
+        driver.get(settings.bot)
+        driver.implicitly_wait(10)
+        driver.find_element_by_xpath("//div[@id='side']/header//img").click()
+        conversation_page = ConversationPage(driver)
+        conversation_page.send_keys_to_bar_message("INIT MESSAGE..")
+        time.sleep(10)
+    elif settings.bot_type == "fb":
+        driver.get("https://m.me/{}".format(settings.bot))
+        login = LoginPage(driver)
+        login.login(settings.fb_user, settings.fb_password)
     botrunner = QA_Botrunner_API_Client()
     botrunner.change_state(settings.user_number, settings.state)
     time.sleep(20)
@@ -72,4 +77,6 @@ def pytest_runtest_makereport(item):
 
 def _capture_screenshot(name):
     driver.get_screenshot_as_file(name)
+
+
 
