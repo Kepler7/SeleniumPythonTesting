@@ -20,8 +20,8 @@ class TestFaqs(BaseClass):
         cms_api.set_token()
         botrunner_api = QA_Botrunner_API_Client()
         setter = self.get_settings_object()
-        time = str(datetime.now())
-        faqs_dir = os.path.join("test_" + time, "_FAQS")
+        time_now = str(datetime.now())
+        faqs_dir = os.path.join("test_" + time_now, "_FAQS")
         if setter.bot_type == "wa" and setter.faqs == "semantic_search":
             page = ConversationPage(self.driver)
             results = wa_faqs_semantic_search(
