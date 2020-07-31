@@ -16,7 +16,7 @@ class ConversationPage(BaseClass):
 
     messageBarInput = (By.XPATH, "//footer//div[@contenteditable]")
     send_button = (By.CSS_SELECTOR, "footer span[data-icon='send']")
-    link_to_webview = (By.CSS_SELECTOR, "a[href*='yalochat.com']")
+    link_to_webview = (By.CSS_SELECTOR, "a[href*='yalo']")
     XPATH_PANE_CONVO_ALL = (By.XPATH, "//div[@id='main']//div[@data-id]")
     XPATH_PANE_TYPE_MESSAGE_BAR = (By.XPATH, "//footer//div[@contenteditable]")
     XPATH_PANE_SEND_MESSAGE_BUTTON = (By.XPATH, "//footer//span[@data-icon='send']")

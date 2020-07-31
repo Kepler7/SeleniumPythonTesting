@@ -26,7 +26,8 @@ class Webview_ProductsPage(BaseClass):
         for product in products:
             divide_str = product.text.splitlines()
             names_grams.append(divide_str[0])
-            amount = divide_str[2].split('$')
+            amount = divide_str[-2].split('$')  # this line has -2 as index since that will always get price sometimes
+            # there is not description however 'agregar' button should be there
             final_price = amount[1].rstrip('0') if '.' in amount[1] else amount[1]
             if final_price[-1] == '.':
                 price_final = final_price.split('.')
@@ -45,29 +46,35 @@ class Webview_ProductsPage(BaseClass):
                 continue
             else:
                 csv_dict[row[0]] = row[3]
-        for prod in dict.keys():
-            counter = 0
-            for prod_csv in csv_dict.keys():
-                prod_trim = "".join(prod.split())
-                prod_csv_trim = "".join(prod_csv.split())
-                if prod_trim in prod_csv_trim:
-                    try:
-                        assert dict[prod] == csv_dict[prod_csv]
-                        log.info("try : Actual value of " + prod + " is %s" % dict[
-                            prod] + ":" + " Expected Value in csv of " + prod_csv +
-                                 " is " + csv_dict[prod_csv] + "  found in line:  " + str(counter))
-                    except AssertionError:
-                        log.error("Actual value of " + prod + " is %s" % dict[
-                            prod] + ":" + " Expected Value in csv of " + prod_csv +
-                                  " is " + csv_dict[prod_csv] + " found in line: " + str(counter))
-                else:
-                    counter = counter + 1
-                    if counter > 500:
-                        log.info(" ***************************************** " + prod + " not in list ")
+        with open('results_prices.csv', 'w') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerow(["Actual Value", "Expected Value", "Found_line"])
+            for prod in dict.keys():
+                counter = 0
+                for prod_csv in csv_dict.keys():
+                    prod_trim = "".join(prod.split())
+                    prod_csv_trim = "".join(prod_csv.split())
+                    if prod_trim == prod_csv_trim:
+                        try:
+                            assert dict[prod] == csv_dict[prod_csv]
+                            actual = "CORRECT : Actual value of " + prod + " is %s" % dict[prod] + ":"
+                            expected = " Expected Value in csv of " + prod_csv + " is " + csv_dict[prod_csv]
+                            found_line = "  found in line:  " + str(counter)
+                            log.info(actual + expected + found_line)
+                            writer.writerow([actual, expected, found_line])
+                        except AssertionError:
+                            actual = "ERROR : Actual value of " + prod + " is %s" % dict[prod] + ":"
+                            expected = " Expected Value in csv of " + prod_csv + " is " + csv_dict[prod_csv]
+                            found_line = "  found in line:  " + str(counter)
+                            log.error(actual + expected + found_line)
+                            writer.writerow([actual, expected, found_line])
+                    else:
+                        counter = counter + 1
+                        if counter > 500:
+                            log.info(" ***************************************** " + prod + " not in list ")
+                            writer.writerow([prod, " Not Found", " Error"])
 
     def get_product_tiles(self):
         """ Returns a list of elements that matches the product tile locator.
         """
         return self.driver.find_elements(*Webview_ProductsPage.PRODUCT_TILES_XPATH)
-
-
