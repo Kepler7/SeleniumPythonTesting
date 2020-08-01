@@ -18,7 +18,6 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="class")
 def setup(request):
-    # data = HomePageData()
     reader = ReadConfig()
     settings = reader.readConfigFile()
     global driver

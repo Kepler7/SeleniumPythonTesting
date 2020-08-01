@@ -26,8 +26,9 @@ class Webview_ProductsPage(BaseClass):
         for product in products:
             divide_str = product.text.splitlines()
             names_grams.append(divide_str[0])
-            amount = divide_str[-2].split('$')  # this line has -2 as index since that will always get price sometimes
-            # there is not description however 'agregar' button should be there
+            for line in divide_str:
+                if '$' in line:
+                    amount = line.split('$')
             final_price = amount[1].rstrip('0') if '.' in amount[1] else amount[1]
             if final_price[-1] == '.':
                 price_final = final_price.split('.')
@@ -57,13 +58,13 @@ class Webview_ProductsPage(BaseClass):
                     if prod_trim == prod_csv_trim:
                         try:
                             assert dict[prod] == csv_dict[prod_csv]
-                            actual = "CORRECT : Actual value of " + prod + " is %s" % dict[prod] + ":"
+                            actual = "CORRECT : Actual value of " + prod + " is %s" % dict[prod]
                             expected = " Expected Value in csv of " + prod_csv + " is " + csv_dict[prod_csv]
                             found_line = "  found in line:  " + str(counter)
                             log.info(actual + expected + found_line)
                             writer.writerow([actual, expected, found_line])
                         except AssertionError:
-                            actual = "ERROR : Actual value of " + prod + " is %s" % dict[prod] + ":"
+                            actual = "ERROR : Actual value of " + prod + " is %s" % dict[prod]
                             expected = " Expected Value in csv of " + prod_csv + " is " + csv_dict[prod_csv]
                             found_line = "  found in line:  " + str(counter)
                             log.error(actual + expected + found_line)
