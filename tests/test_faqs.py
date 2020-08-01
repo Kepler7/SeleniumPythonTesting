@@ -35,6 +35,7 @@ class TestFaqs(BaseClass):
             )
         elif setter.bot_type == "fb" and setter.faqs == "semantic_search":
             page = ConversationPage_FB(self.driver)
+            breakpoint()
             results = fb_faqs_semantic_search(
                 cms_api,
                 setter.cms_bot_slug,

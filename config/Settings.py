@@ -16,7 +16,6 @@ class Settings:
             fb_user,
             fb_password,
             fb_bot_number
-            #test_dir
     ):
         self.bot = bot
         self.chrome_profile_path = chrome_profile_path
@@ -33,4 +32,3 @@ class Settings:
         self.fb_user = fb_user
         self.fb_password = fb_password
         self.fb_bot_number = fb_bot_number
-        #self.test_dir = test_dir
