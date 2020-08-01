@@ -7,9 +7,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 
+from config.ConfigReader import ReadConfig
+
 
 @pytest.mark.usefixtures("setup")
 class BaseClass:
+
+    def get_settings_object(self):
+        reader = ReadConfig()
+        return reader.readConfigFile()
 
     def verifyLinkPresence(self, text):
         WebDriverWait(self.driver, 10).until(
@@ -28,30 +34,16 @@ class BaseClass:
             EC.visibility_of(element))
         assert text_to_compare in element.text
 
-    def getElement(self, by):
-        return self.driver.find_element(by)
-
-    def clickElement(self, by):
-        try:
-            if self.driver.find_elements(by).size == 1:
-                self.getElement(by).click()
-        except Exception as e:
-            print(e)
-
-    def sendKeysTo(self, by, keys):
-        self.getElement(by).send_keys(keys)
-
-    def selectOptionByText(self, locator, text):
-        sel = Select(locator)
-        sel.select_by_visible_text(text)
-
     def getLogger(self):
+        """
+        Initializes logs, pass path where your logfile will be saved
+        :return: log instance
+        """
         loggerName = inspect.stack()[1][3]
         logger = logging.getLogger(loggerName)
         # logger = logging.getLogger(__name__)
 
-        fileHandler = logging.FileHandler(
-            '\\Users\\kepler.velasco\\Documents\\WorkspaceSelenium\\SeleniumPythonTesting\\utilities\\logfile.log')
+        fileHandler = logging.FileHandler('\\Users\\kepler.velasco\\Documents\\WorkspaceSelenium\\SeleniumPythonTesting\\utilities\\logfile.log')
         formatter = logging.Formatter("%(asctime)s :%(levelname)s : %(name)s : %(message)s")
 
         fileHandler.setFormatter(formatter)

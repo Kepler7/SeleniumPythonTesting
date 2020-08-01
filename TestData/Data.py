@@ -1,15 +1,17 @@
 import openpyxl
 
 
-class HomePageData:
-    test_homePage_data = [{"firstName": "Kepler", "lastName": "Velasco", "email": "keph76@gmail.com", "gender": "Male"},
-                          {"firstName": "Deneb", "lastName": "Solano", "email": "denebsolano@gmail.com",
-                           "gender": "Female"}]
+class Data:
 
-    wa_test_url = {"burgerKing": "https://wa.me/5215513093333", "aeroMexico": "https://wa.me/5215551334000"}
+    #wa_test_url = {"burgerKing": "https://wa.me/5215513093333", "aeroMexico": "https://wa.me/5215551334000"}
 
     @staticmethod
     def getTestData(test_case_name):
+        """
+        This method gets the data from a excel file you need to pass the path
+        :param test_case_name: the name of the test case that will be in excel file in column 0 and x row number
+        :return: data from excel file
+        """
         Dict = {}
         book = openpyxl.load_workbook("C:\\Users\\deneb\\Desktop\\seleniumPython\\testdata.xlsx")
         sheet = book.active

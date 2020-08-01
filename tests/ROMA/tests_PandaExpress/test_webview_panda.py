@@ -1,6 +1,5 @@
 import time
 
-from config.ConfigReader import ReadConfig
 from pageObjects.waPageObjects.ConversationPage_wa import ConversationPage
 from utilities.BaseClass import BaseClass
 
@@ -8,8 +7,7 @@ from utilities.BaseClass import BaseClass
 class TestwebviewPanda(BaseClass):
 
     def test_register_data(self):
-        reader = ReadConfig()
-        setter = reader.readConfigFile()
+        setter = self.get_settings_object()
         conversation_page = ConversationPage(self.driver)
         elements = conversation_page.get_messages_elements()
         if "nombre completo" not in elements[-1].text:
