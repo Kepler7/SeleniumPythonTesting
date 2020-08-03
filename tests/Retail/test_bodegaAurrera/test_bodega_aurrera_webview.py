@@ -16,4 +16,3 @@ class TestWebviewBodega(BaseClass):
         # this method will switch to webview
         web_view = conversation_page.access_to_webview(child_window)
         web_view.verify_correct_prices_in_products('ArticulosTop_Webview_new.csv')
-        time.sleep(10)
